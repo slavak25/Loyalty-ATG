@@ -1,0 +1,20 @@
+<!DOCTYPE gsa-template PUBLIC "-//Art Technology Group, Inc.//DTD Dynamo Security//EN" 
+"http://www.atg.com/dtds/gsa/gsa_1.0.dtd">
+
+<gsa-template>
+  <header>
+    <name>Loyalty Repository</name>
+    <author>Vyachaslau Koshman</author>    
+  </header>  
+  <item-descriptor name="loyaltyTransaction" display-property="id">
+      <table name="loyalty_transaction" 
+           type="primary" 
+           id-column-name="id">
+      <property name="id" data-type="string"/>      
+      <property name="userId" column-name="user_id" data-type="string" required="true"/> 
+      <property name="amount" column-name="amount" data-type="int" required="true"/>  
+      <property name="description" column-name="description" data-type="string"/>  
+      <property name="transactionDate" column-name="transaction_date" data-type="timestamp"/>           
+    </table>     
+  </item-descriptor>
+</gsa-template>
